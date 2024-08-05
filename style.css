@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Mooli&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root{
-  --title-color: #d1aa73;
-  --link-color: #a98a5f;
-  --sidebar-color: #cab18e;
-  --background-color: #e5c496;
+  --title-color: #FFF8EA;
+  --link-color: #594545;
+  --sidebar-color: #9E7676;
+  --background-color: #FFF8EA;
 }
+
+.dark-mode:root{
+    --title-color: #A78295;
+    --link-color: #3F2E3E;
+    --sidebar-color: #EFE1D1;
+    --background-color: #331D2C;
+}
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -15,8 +25,9 @@
 
 body{
   font-family: serif;
-  font-size: 10px;
-text-transform: uppercase;
+  font-size: 5px;
+  text-transform: uppercase;
+  background: var(--background-color);
 }
 
 .main{
@@ -34,19 +45,18 @@ background: var(--background-color);
 /* SIDEBAR */
 
 #sidebar{
-padding-left: 10px;
+padding: 0 5px;
 width: 20%;
 height: 80vh;
-background: var(--background-color);
+background: var(--link-color);
 }
 
 p{
   text-align: justify;
-  background: var(--background-color);
-  padding: 10px 0 15px 0;
-  font-size: 12px;
+  padding: 10px 5px;
   color: grey;
-  font-family: sans;
+  font-family: "B612 Mono", monospace;
+  font-weight: 300;
   text-rendering: auto;
 }
 
@@ -61,53 +71,60 @@ a{
  text-decoration: none;
  color: var(--link-color);
 }
+h2{
+color: var(--title-color);
+}
 
 h4{
-  color: var(--title-color);
-  margin-bottom: 10px;
-  font-size: 10px;
-  width: 200px;
-  height: 30px;
+color:var(--link-color);
+}
+h4, h2{
+  margin-bottom: 5px;
+  /* width: 200px;
+  height: 30px; */
   font-weight: 0;
-  text-transform: uppercase;
   letter-spacing: 3px;
+  border-left: 2px solid var(--title-color);
+  padding-left: 5px;
 }
 
 
-  blockquote{
+blockquote{
     background: var(--link-color);
     text-align: center;
-    width: 5%;
     margin: 3% auto;
     padding: 5px;
-    font-size: 12px;
     color: white;
     border-radius: 2px;
     /* border: 1px solid rgb(226, 223, 223); */
-  border-bottom: 3px solid var(--title-color);
+    border-bottom: 3px solid var(--title-color);
   }
 
 /* NAV */
 
 #nav-bar{
-  width: 74%;
-float: right;
   text-align: center;
-  background: linear-gradient(90deg, #fff, lightblue);
+  background: var(--link-color);
+  margin: auto;
 }
 
-#nav-gif{
-  margin-left: 10px;
-  margin-top: 5px;
+.nav-link{
+    color: var(--background-color);
+    padding: 0 3px 3px;
+    border-bottom: 2px solid var(--background-color);
+    font-weight: lighter;
+    font-size: 8em;
+
 }
-
-
+.nav-link:hover{
+    color: var(--sidebar-color);
+    border-bottom: 3px solid var(--link-color);
+}
 /* PROJETOS SECTION */
 
 #projetos{
 width: 80%;
 height: 80vh;
-
 }
 
 .grid{
@@ -126,21 +143,22 @@ height: 80vh;
   width: 100%;
   border: none;
   transition: 0.3s;
+  padding-left: 20px;
 }
 
 .faixa:hover{
   padding-left: 40px;
   transition: 0.3s;
 }
+
+/* MENUZINHO DOS LINKS UTEIS */
 .notes a {
   background: #f7f7f7;
   margin: 3px;
   padding: 3px;
   display: block;
-  font-size: 9px;
   border-radius: 3px;
   text-transform:uppercase;
-  font-size: 11px;
   font-family : 'Ubuntu Mono';
   -webkit-animation: fadeInDown 4s;
   -moz-animation: fadeInDown 4s;
@@ -151,6 +169,8 @@ height: 80vh;
   color: var(--link-color);
   opacity:0.8;
 }
+
+/* PROJETOS */
 .square-project{
   background: white;
   flex-basis: 40%;
@@ -164,6 +184,7 @@ height: 80vh;
 .square-project, #me{
   opacity: 0.5;
   transition: 0.8s;
+  border-radius: 3px;
 }
 
 .square-project:hover, #me:hover{
