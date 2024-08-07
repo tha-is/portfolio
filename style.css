@@ -2,17 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root{
-  --title-color: #FFF8EA;
-  --link-color: #594545;
-  --sidebar-color: #9E7676;
-  --background-color: #FFF8EA;
+  --h4-color: #867070;
+  --h2-color: #D5B4B4;
+  --link-color: #867070;
+  --sidebar-color: #D5B4B4;
+  --background-color: #F5EBEB;
 }
 
 .dark-mode:root{
-    --title-color: #A78295;
-    --link-color: #3F2E3E;
+    --h4-color: #A78295;
+    --h2-color: #EFE1D1;
+    --link-color: #A78295;
     --sidebar-color: #EFE1D1;
     --background-color: #331D2C;
+}
+
+.pastel-mode:root{
+  --h4-color: #D37676;
+  --link-color: #D37676;
+  --sidebar-color: #F1EF99;
+  --background-color: #EBC49F;
+}
+
+.light-mode:root{
+  --h4-color: #C5705D;
+  --link-color: #D0B8A8;
+  --sidebar-color: #D0B8A8;
+  --background-color: #F8EDE3;
 }
 
 *{
@@ -23,7 +39,7 @@
 
 }
 html{
-    font-size: 9px;
+    font-size: 12px;
 }
 body{
   text-transform: uppercase;
@@ -33,31 +49,27 @@ body{
 .main{
 display: flex;
 flex-direction: row;
-justify-content: space-around;
-align-items: center;
-align-content: center;
-margin: auto;
-height: 80vh;
-width: 80%;
-background: var(--background-color);
+margin: 10px auto 4px;
+width: 80vw;
 }
+
 
 /* SIDEBAR */
 
 #sidebar{
-width: 20%;
 height: 100%;
+width: 30%;
 }
 
 .gadget > h2 {
-color: var(--link-color);
-border-left: 2px solid var(--link-color);
+color: var(--h4-color);
+border-left: 2px solid var(--h2-color);
 }
 .gadget{
-    background: var(--link-color);
+    background: var(--sidebar-color);
     display: flex;
     flex-direction: column;
-    padding: 3px;
+    padding: 5px;
 }
 .gadget:nth-of-type(1){
     background: transparent;
@@ -69,11 +81,10 @@ border-left: 2px solid var(--link-color);
 
 p{
   text-align: justify;
-  padding: 10px 5px;
-  color: grey;
-  font-family: "B612 Mono", monospace;
+  color: var(--link-color);
   font-weight: 300;
   text-rendering: auto;
+
 }
 
 /*  */
@@ -88,19 +99,12 @@ a{
  color: var(--link-color);
 }
 h2{
-color: var(--title-color);
-border-left: 2px solid var(--title-color);
+color: var(--h4-color);
+border-left: 2px solid var(--h4-color);
 padding-left: 5px;
 letter-spacing: 3px;
-}
-
-h4{
-color:var(--sidebar-color);
-}
-
-h4, h2{
-  margin-bottom: 5px;
-  font-weight: lighter;
+margin-bottom: 5px;
+font-weight: lighter;
 }
 
 /* NAV */
@@ -112,37 +116,47 @@ h4, h2{
 }
 .nav-link{
     color: var(--link-color);
-    padding: 3px;
+    padding: 5px;
     font-weight: lighter;
-    background-color: var(--background-color);
+    transition: 0.3s;
+    border: 2px solid var(--sidebar-color);
 }
 .nav-link:hover{
-    color: var(--sidebar-color);
+    color: var(--h4-color);
+    background-color: var(--sidebar-color);
+    transition: 0.3s;
 }
 /* PROJETOS SECTION */
 
 #projetos{
-width: 80%;
-height: 80vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sidebar-color);
+  width: 80%;
+  margin-left: 3px;
 }
 
-.grid{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: auto;
-  width: 90%;
-  height: 60vh;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  align-items: center;
+/* PROJETOS */
+.square-project{
+  background: white;
+  opacity: 0.5;
+  transition: 1s;
+  border-radius: 1px;
+  width: 97%;
+  height:45%;
+}
+
+.square-project:hover{
+  opacity: 0.8;
 }
 
 .faixa{
-  width: 100%;
   border: none;
   transition: 0.3s;
   padding-left: 20px;
+  background-color: #f7f7f7;
 }
 
 .faixa:hover{
@@ -169,52 +183,90 @@ height: 80vh;
   opacity:0.8;
 }
 
-/* PROJETOS */
-.square-project{
-  background: white;
-  flex-basis: 40%;
-  flex-grow: 1;
-  height: 45%;
-  max-width: 45%;
-  align-items: center;
-  align-content: center;
-}
-
-.square-project, #me{
-  opacity: 0.5;
-  transition: 0.8s;
-  border-radius: 3px;
-}
-
-.square-project:hover, #me:hover{
-  opacity: 0.7;
-}
-
 /* FOOTER */
 
 footer{
-  background: var(--link-color);
+  background: var(--sidebar-color);
   height: auto;
   width: 80%;
   margin: auto;
-  padding: 15px;
-
-  /* display: flex;
-  flex-direction: column;
-  align-content: center; */
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
-#me{
-  width: 80px;
-  height: 80px;
-  float: left;
-  margin-right: 10px;
-  border: 4px solid rgba(104, 112, 133, 0.515);
-}
-
 strong{
-    background-color: var(--sidebar-color);
+    background-color: var(--background-color);
     padding: 0 1px;
     border-radius: 2px;
-    color: var(--title-color);
+    color: var(--sidebar-color);
 }
+
+  .checkbox-wrapper-54 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+  }
+
+  .checkbox-wrapper-54 *,
+  .checkbox-wrapper-54 ::after,
+  .checkbox-wrapper-54 ::before {
+    box-sizing: border-box;
+  }
+
+  /* The switch - the box around the slider */
+  .checkbox-wrapper-54 .switch {
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    display: inline-block;
+  }
+
+  /* The slider */
+  .checkbox-wrapper-54 .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+  }
+
+  .checkbox-wrapper-54 .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    ;
+   transition: .4s;
+  }
+
+  .checkbox-wrapper-54 input:checked + .slider {
+    background-color: #303136;
+  }
+
+  .checkbox-wrapper-54 input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+
+  .social{
+
+    width: 30%;
+  }
