@@ -9,7 +9,6 @@
   --background-color: #F5EBEB;
 }
 
-/*TESTANDO*/
 .dark-mode:root{
     --h4-color: #A78295;
     --h2-color: #EFE1D1;
@@ -121,7 +120,8 @@ font-weight: lighter;
     font-weight: lighter;
     transition: 0.3s;
     border: 2px solid var(--sidebar-color);
-}
+    box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+  }
 .nav-link:hover{
     color: var(--h4-color);
     background-color: var(--sidebar-color);
@@ -132,7 +132,6 @@ font-weight: lighter;
 #projetos{
   display: flex;
   justify-content: space-evenly;
-  flex-direction: column;
   align-items: center;
   background-color: var(--sidebar-color);
   width: 80%;
@@ -142,27 +141,37 @@ font-weight: lighter;
 /* PROJETOS */
 .square-project{
   background: white;
-  opacity: 0.5;
-  transition: 1s;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-basis: 40%;
+  opacity: 0.9;
+  align-items: center;
+  align-content: center;
+  transition: 0.4s;
   border-radius: 1px;
-  width: 97%;
-  height:45%;
+ /* width: 97%;*/
+  height:90%;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
 }
 
 .square-project:hover{
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .faixa{
   border: none;
-  transition: 0.3s;
-  padding-left: 20px;
+  transition: 0.5s;
+  height: 20%;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
   background-color: #f7f7f7;
 }
 
 .faixa:hover{
-  padding-left: 40px;
-  transition: 0.3s;
+  padding-top: 20px;
+  color: black;
 }
 
 /* MENUZINHO DOS LINKS UTEIS */
@@ -178,6 +187,7 @@ font-weight: lighter;
   -moz-animation: fadeInDown 4s;
   -ms-animation: fadeInDown 4s;
   color:#666;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
 }
 .notes a:hover{
   color: var(--link-color);
@@ -189,7 +199,7 @@ font-weight: lighter;
 footer{
   background: var(--sidebar-color);
   height: auto;
-  width: 80%;
+  width: 80%; /* TESTANDO */
   margin: auto;
   padding: 5px;
   display: flex;
