@@ -1,23 +1,47 @@
-const $html = document.querySelector('html');
-const $checkbox = document.querySelector('#switch');
+const repositories = document.getElementById("projects-content");
+const commits = document.getElementById("commits-content");
 
-$checkbox.addEventListener('change', function(){
-    $html.classList.toggle('dark-mode');
-})
+function getAPIGitHubProjects() {
+    fetch('https://api.github.com/users/tha-is/starred')
+    .then(async res => {
+        if( !res.ok) {
+            throw new Error(res.status);
+        }
 
-const button1 = document.querySelector('#button1');
-const text = document.querySelector('#text');
+        let data = await res.json();
+        data.map( item => {
+            let project = document.createElement('div');
+            project.innerHTML = `
+    <div class="p-1 text-bg-light rounded-1">
+    <div class="bg-dark rounded-1 text-light title"><a href="${item.git_url}" target="_blank">${item.name}</a></div>
+            <span class="date-update">${ Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at))}</span>
+            <div class="description">${item.description}</div>
+    
+      <span class="badge text-bg-dark language">${ item.language}</span>
+      </div>
+            `
 
-function testeButton(){
-    button1.innerText = "Parabéns, o teste deu certo!"
-    text.innerText = "Uhuuuu"
-    button1.onclick = inicialButton;
+            repositories.appendChild(project);
+        })
+    })
 }
 
-button1.onclick = testeButton; // estado inicial do botão
+getAPIGitHubProjects()
 
-function inicialButton(){
-    button1.innerText = "Clique aqui!"
-    text.innerText = "Testando botões"
-    button1.onclick = testeButton;
+function getAPIGitHubCommits() {
+    fetch('https://api.github.com/repos/tha-is/portfolio/commits')
+    .then(async res => {
+        if(!res.ok) {
+            throw new Error(res.status);
+        }
+
+        let data = await res.json();
+        data.map( item => {
+            let commit = document.createElement('div');
+            commit.innerHTML = `
+            <div class="p-1 text-bg-light rounded-1>${item.committer}</div>`
+        })
+    })
 }
+
+getAPIGitHubCommits()
