@@ -11,14 +11,13 @@ function getAPIGitHubProjects() {
         let data = await res.json();
         data.map( item => {
             let project = document.createElement('div');
+            project.classList.add('p-1', 'col-7', 'border', 'border-light', 'mb-2');
             project.innerHTML = `
-    <div class="p-1 text-bg-light rounded-1">
-    <div class="bg-dark rounded-1 text-light title"><a href="${item.git_url}" target="_blank">${item.name}</a></div>
+    <div class="title"><a href="${item.git_url}" target="_blank">${item.name}</a></div>
             <span class="date-update">${ Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at))}</span>
             <div class="description">${item.description}</div>
     
-      <span class="badge text-bg-dark language">${ item.language}</span>
-      </div>
+      <span>${ item.language}</span>
             `
 
             repositories.appendChild(project);
@@ -26,10 +25,10 @@ function getAPIGitHubProjects() {
     })
 }
 
-getAPIGitHubProjects()
+/*getAPIGitHubProjects()
 
 function getAPIGitHubCommits() {
-    fetch('https://api.github.com/repos/tha-is/portfolio/commits')
+    fetch('https://api.github.com/https://api.github.com/repos/tha-is/portfolio/commits/tha-is/commits')
     .then(async res => {
         if(!res.ok) {
             throw new Error(res.status);
@@ -39,9 +38,9 @@ function getAPIGitHubCommits() {
         data.map( item => {
             let commit = document.createElement('div');
             commit.innerHTML = `
-            <div class="p-1 text-bg-light rounded-1>${item.committer}</div>`
+            <div class="p-1 rounded-1>${item.committer}</div>`
         })
     })
 }
 
-getAPIGitHubCommits()
+getAPIGitHubCommits()*/
