@@ -35,3 +35,7 @@ strong{
     border-radius: 2px;
     color: var(--sidebar-color);
 }
+
+.hide {
+  display: none;
+}
