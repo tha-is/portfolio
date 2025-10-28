@@ -1,7 +1,7 @@
-# ✨ Layout Portfolio 3.0
----
-<img src="/assets/print.png" align="center"/> <img src="/assets/Color Hunt Palette.png" align="center" width="40">
-
+## ✨ Layout Portfolio 3.0
+<div align="center">
+<img src="/assets/print.png" />
+</div>
 Esse projeto disponibiliza uma base com layout, design e texto limpo e adaptável para desenvolvedores web exibirem seus projetos, currículo e contato.
 
 ### 🖥️ Tecnologias utilizadas
@@ -30,26 +30,28 @@ Para utilizar o layout, faça um git clone em seu repositório e altere as parte
 
 Todos os materiais estão disponíveis na pasta <strong>assets</strong> deste repositório, incluindo a paleta de cores e header da página.
 
-##### API Github
-
-Para a apresentação dos projetos utilizei a API do Github, onde incluo apenas meus projetos que estejam <i>starred</i>. Aconselho a leitura da documentação
-para uma plena interpretação do código mas, caso queira utilizar o mesmo modelo, você deve alterar de 
-```
-https://api.github.com/users/tha-is/starred 
-```
-para 
-```
-https://api.github.com/users/{SEU USER DO GITHUB}/starred
-```
-Caso queira que a API retorne todos os projetos utilize o seguinte link:
-```
-https://api.github.com/users/{SEU USER DO GITHUB}/repos
-```
+<div align="center"> <img src="/assets/Color Hunt Palette.png" width="200"/>  <img src="/assets/FRONTEND DEVELOPER.png" width="700"/> </div>
 
 ### 🎮 Prompts utilizado para gerar a imagem de perfil
 
 ```
 pretty girl with naturally tanned light skin tone, young medieval podcaster witch, long wavy brunette hair, wearing a deep blue magical cloak with gold details, sitting in front of a floating glowing microphone shaped like a crystal orb, surrounded by candles, books, and magical symbols of focus and purpose, background showing a dreamy medieval city under the moonlight, soft glowing light, fantasy cartoon style, colorful mystical atmosphere, digital illustration
+```
+
+##### API Github
+
+Para a apresentação dos projetos utilizei a API do Github, onde incluo meus projetos que estão <i>starred</i>. 
+Aconselho a leitura da documentação para uma plena interpretação do código mas, caso queira utilizar o mesmo modelo, você deve alterar de:
+```
+https://api.github.com/users/tha-is/starred 
+```
+para:
+```
+https://api.github.com/users/{SEU USER DO GITHUB}/starred
+```
+Caso queira que a API retorne todos os projetos utilize o link:
+```
+https://api.github.com/users/{SEU USER DO GITHUB}/repos
 ```
 
 W/ 💜 by [Thais](https://github.com/tha-is)
