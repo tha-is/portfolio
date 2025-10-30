@@ -1,7 +1,7 @@
 # ✨ Portfolio 3.0 — Layout Responsivo para Desenvolvedores
 
 <div align="center">
-  <img src="/assets/print.png" alt="Prévia do Portfólio 3.0" width="700px"/>
+  <img src="_print.png" alt="Prévia do Portfólio 3.0" width="700px"/>
   <br><br>
 
   🔗 <a href="https://tha-is.github.io" target="_blank">
@@ -55,7 +55,7 @@ Abra o projeto e personalize:
 
 💡 Dica: utilize a paleta e o header já incluídos para manter a harmonia visual.
 
-<div align="center"> <img src="/assets/Color Hunt Palette.png" width="200"/> <img src="/assets/FRONTEND DEVELOPER.png" width="600"/> </div>
+<div align="center"> <img src="_Color Hunt Palette.png" width="200"/> <img src="_FRONTEND DEVELOPER.png" width="600"/> </div>
 
 ---
 
