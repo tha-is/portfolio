@@ -1,7 +1,7 @@
-# ✨ Portfolio 3.0 — Layout Responsivo para Desenvolvedores
+# Portfolio — Layout Responsivo para Desenvolvedores
 
 <div align="center">
-  <img src="./assets/_print.png" alt="Prévia do Portfólio 3.0" width="700px"/>
+  <img src="./Tela.png" alt="Prévia do Portfólio" width="700px"/>
   <br><br>
 
   🔗 <a href="tha-is.github.io/portfolio/" target="_blank">
@@ -21,9 +21,7 @@ Ideal para quem quer destacar o próprio trabalho com uma estética profissional
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7E017?style=for-the-badge&logo=javascript&logoColor=black)
-![ChatGPT](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Bing Image Creator](https://img.shields.io/badge/Bing%20Image%20Creator-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
+![React](https://img.shields.io/badge/react%20os-0088CC?style=for-the-badge&logo=reactos&logoColor=white)
 
 </div>
 
@@ -32,10 +30,7 @@ Ideal para quem quer destacar o próprio trabalho com uma estética profissional
 ## 🧭 Funcionalidades
 
 - Exibição automática de projetos via **API do GitHub**
-- Design minimalista, responsivo e pronto para **customização**
-- Layout otimizado para **portfólios pessoais**
-- Seção com **currículo e contato**
-- Inspiração visual e criativa para desenvolvedores
+- Design minimalista e responsivo.
 
 ---
 
@@ -45,17 +40,10 @@ Clone este repositório:
 ```bash
 git clone https://github.com/tha-is/portfolio-layout.git
 ```
-Abra o projeto e personalize:
-
-- Textos: nome, bio, contatos e seções
-
-- Imagens: disponíveis na pasta /assets
-
-- Cores e fontes: definidas em variáveis CSS
 
 💡 Dica: utilize a paleta e o header já incluídos para manter a harmonia visual.
 
-<div align="center"> <img src="./styles/_Color Hunt Palette.png" width="200"/> <img src="./styles/_FRONTEND DEVELOPER.png" width="600"/> </div>
+<div align="center"> <img src="./styles/_Color Hunt Palette.png" width="200"/> <img src="./paleta.png" width="600"/> </div>
 
 ---
 
@@ -80,13 +68,6 @@ Exemplo prático:
 fetch("https://api.github.com/users/{SEU_USER_DO_GITHUB}/repos")
   .then(res => res.json())
   .then(data => console.log(data));
-```
-
----
-
-## 🎨 Prompt para gerar imagem de perfil
-```bash
-pretty girl with naturally tanned light skin tone, young medieval podcaster witch, long wavy brunette hair, wearing a deep blue magical cloak with gold details, sitting in front of a floating glowing microphone shaped like a crystal orb, surrounded by candles, books, and magical symbols of focus and purpose, background showing a dreamy medieval city under the moonlight, soft glowing light, fantasy cartoon style, colorful mystical atmosphere, digital illustration
 ```
 
 ---

@@ -1,0 +1,19 @@
+:root {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font: 14px Roboto, sans-serif;
+  background-color: #393646;
+}
+
+.btn-portfolio {
+  padding: 5px;
+  letter-spacing: 0.5px;
+  border-radius: 0%;
+  text-decoration: none;
+  color: #393646;
+  transition: 1s;
+}
