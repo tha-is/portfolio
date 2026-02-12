@@ -1,7 +1,7 @@
 # Portfolio — Layout Responsivo para Desenvolvedores
 
 <div align="center">
-  <img src="./Tela.png" alt="Prévia do Portfólio" width="700px"/>
+  <img src="src/assets/Tela.png" alt="Prévia do Portfólio" width="700px"/>
   <br><br>
 
   🔗 <a href="tha-is.github.io/portfolio/" target="_blank">
@@ -43,7 +43,7 @@ git clone https://github.com/tha-is/portfolio-layout.git
 
 💡 Dica: utilize a paleta e o header já incluídos para manter a harmonia visual.
 
-<div align="center"> <img src="./styles/_Color Hunt Palette.png" width="200"/> <img src="./paleta.png" width="600"/> </div>
+<div align="center"> <img src="src/assets/Paleta.png" width="200"/> <img src="src/assets/Paleta.png" width="600"/> </div>
 
 ---
 
