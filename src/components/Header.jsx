@@ -1,4 +1,5 @@
 import React from 'react';
+import imagemHeader from '../assets/Icone.png'
 
 const Header = () => {
     const headerInfo = {
@@ -10,7 +11,7 @@ const Header = () => {
         <header className='row row-cols-1 row-cols-md-2'>
             <div className='col'>
                 <img 
-                    src="./src/assets/Icone.png" 
+                    src={imagemHeader} 
                     alt="Logo" 
                     className="img-fluid object-fit-cover"/>
             </div>
