@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+  import { useEffect, useState } from 'react'
 
 function BotaoIcone({ link, value }) {
   const [hover, setHover] = useState(false);
@@ -38,7 +38,7 @@ export default function Cards() {
           fontWeight:"bolder"
         }}>{repo.name}</div>
         <div className="card-body p-0" >
-          <img src='./src/assets/post.png' className='img-fluid'></img>
+          <img src="src/assets/post.png" alt="imagem padrão de post" className='img-fluid' />
           <p className='card-text mb-2'>{repo.description}
           </p>
           </div>
